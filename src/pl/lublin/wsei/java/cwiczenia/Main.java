@@ -68,6 +68,22 @@ public class Main {
         //System.out.printf("DEC = " + numer + " BIN = " + Integer.toBinaryString(numer) + " HEX = " +Integer.toHexString(numer).toUpperCase());
         System.out.printf("DEC = %d, BIN = %4s, HEX = %4s", numer, Integer.toBinaryString(numer), Integer.toHexString(numer).toUpperCase());
 
+        int[] liczby = new int[30];
+        Random rnd = new Random();
+
+        for (int i = 0; i < 30; i++)
+            liczby[i] = rnd.nextInt();
+
+        int mx = Integer.MIN_VALUE;
+        int mn = Integer.MAX_VALUE;
+        long avg = 0;
+        for (int l : liczby) {
+            System.out.println(l);
+            if (l < mn) mn = 1;
+            if (l > mx) mx = 1;
+            avg += l;
+        }
+        System.out.printf("MIN = %d,MAX = %d, AVG = %f", mn, mx, (float) avg / liczby.length);
     }
 
 }
