@@ -1,5 +1,8 @@
 package pl.lublin.wsei.java.cwiczenia;
 
+import pl.lublin.wsei.java.cwiczenia.mylib.Account;
+
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -9,7 +12,15 @@ import java.util.Scanner;
  */
 
 public class Main {
+    public static String leftPad(String aText, char aChar, int aWidth) {
+        String res = aText;
+        for (int i = 0; i < aWidth - aText.length(); i++)
+            res = aChar + res;
+        return res;
+    }
+
     public static void main(String[] args) {
+
         System.out.print("Ala");
         System.out.print("ma");
         System.out.print("kota\n");
@@ -49,5 +60,14 @@ public class Main {
             if ((num1 == 0) || (num2 == 0)) break;
             System.out.printf("Wynik dodawania %d + %d = %d%n", num1, num2, num1 + num2);
         } while (true);
+
+        Scanner input2 = new Scanner(System.in);
+        int numer;
+        System.out.print("Podaj liczbe: ");
+        numer = input2.nextInt();
+        //System.out.printf("DEC = " + numer + " BIN = " + Integer.toBinaryString(numer) + " HEX = " +Integer.toHexString(numer).toUpperCase());
+        System.out.printf("DEC = %d, BIN = %4s, HEX = %4s", numer, Integer.toBinaryString(numer), Integer.toHexString(numer).toUpperCase());
+
     }
+
 }
