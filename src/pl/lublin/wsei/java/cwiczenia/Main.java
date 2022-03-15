@@ -21,6 +21,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        Account acc = new Account();
+        acc.setName("piotr Gołabek");
+//        acc.name = "Piotr Gołabek";
+        System.out.println(acc.getName());
+        System.out.printf("%s%n",Account.capitalize("stanisŁaw maruSARz"));
+
         System.out.print("Ala");
         System.out.print("ma");
         System.out.print("kota\n");
